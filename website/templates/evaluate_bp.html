@@ -1,0 +1,36 @@
+<!-- website/templates/evaluate_bp.html -->
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <!-- Meta Tags and other head elements remain unchanged -->
+</head>
+<body>
+    <!-- Preloader, Header Area, and other sections remain unchanged -->
+
+    <!-- Main Content Area -->
+    <section class="survey section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Enter Blood Pressure Values</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form method="post" id="bp-form">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Evaluate</button>
+                    </form>
+                    <div id="evaluation-result" class="mt-4">{{ evaluation }}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Main Content Area -->
+
+    <!-- Footer Area remains unchanged -->
+</body>
+</html>

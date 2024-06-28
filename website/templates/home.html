@@ -1,0 +1,536 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="MedAI, medical AI, AI diagnostics, symptom checker, health diagnostics, medical technology, healthcare AI, disease diagnosis, health assessment, medical services, AI healthcare solutions">
+        <meta name="description" content="">
+        <meta name='copyright' content=''>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Title -->
+        <title>MedAI</title>
+        
+        <!-- Favicon -->
+        <link rel="icon" href="{% static 'website/img/favicon.png' %}">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/nice-select.css' %}">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/font-awesome.min.css' %}">
+        <!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/icofont.css' %}">
+        <!-- Slicknav -->
+        <link rel="stylesheet" href="{% static 'website/css/slicknav.min.css' %}">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/owl-carousel.css' %}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/animate.min.css' %}">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/magnific-popup.css' %}">
+        
+        <!-- MedAI CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'website/css/responsive.css' %}">
+        
+    </head>
+    <body>
+    
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+    
+        <!-- Header Area -->
+        <header class="header" >
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-5 col-12">
+                            <!-- Contact -->
+                            <ul class="top-link">
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                            <!-- End Contact -->
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-12">
+                            <!-- Top Contact -->
+                            <ul class="top-contact">
+                                <li><i class="fa fa-phone"></i>+40 1234 56789</li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:medAI@mail.com">medAI@mail.com</a></li>
+                            </ul>
+                            <!-- End Top Contact -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Topbar -->
+            <!-- Header Inner -->
+            <div class="header-inner">
+                <div class="container">
+                    <div class="inner">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <!-- Start Logo -->
+                                <div class="logo">
+                                    <a href="{% url 'home' %}"><img src="{% static 'website/img/logo.png' %}" alt="#"></a>
+                                </div>
+                                <!-- End Logo -->
+                                <!-- Mobile Nav -->
+                                <div class="mobile-nav"></div>
+                                <!-- End Mobile Nav -->
+                            </div>
+                            <div class="col-lg-7 col-md-9 col-12">
+                                <!-- Main Menu -->
+                                <div class="main-menu">
+                                    <nav class="navigation">
+                                        <ul class="nav menu">
+                                            <li><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href=>Services<i class="icofont-rounded-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="{% url 'diagnose' %}">Symptom Interpretation</a></li>
+                                                    <li><a href="{% url 'heart' %}">Blood Pressure Check</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!--/ End Main Menu -->
+                            </div>
+                            <div class="col-lg-2 col-12">
+                                <div class="get-quote">
+                                    <a href="{% url 'diagnose' %}" class="btn">Start the Questionnaire</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Header Inner -->
+        </header>
+        <!-- End Header Area -->
+        
+        <!-- Slider Area -->
+        <section class="slider">
+            <div class="hero-slider">
+                <!-- Start Single Slider -->
+                <div class="single-slider" style="background-image:url('{% static 'website/img/slider2.jpg' %}')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="text">
+                                    <h1> <span>Diagnosis</span> possible conditions from <span>Home!</span></h1>
+                                    <div class="button">
+                                        <a href="{% url 'diagnose' %}" class="btn">Start the Questionnaire</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Slider -->
+                <!-- Start Single Slider -->
+                <div class="single-slider" style="background-image:url('{% static 'website/img/slider.jpg' %}')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="text">
+                                    <h1>Check <span>Blood Pressure </span> and <span>Pulse</span></h1>
+                                    <div class="button">
+                                        <a href="{% url 'heart' %}" class="btn">Check Pulse</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Slider -->
+                
+            </div>
+        </section>
+        <!--/ End Slider Area -->
+        
+
+        <!-- Start Feautes -->
+        <section class="Feautes section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <img src="{% static 'website/img/section-img.png' %}" alt="#">
+                            <h3>How it Works?</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <!-- Start Single features -->
+                        <div class="single-features">
+                            <div class="signle-icon">
+                                <i class="icofont-list"></i>
+                            </div>
+                            <h3>Complete the Questionnaire</h3>
+                        </div>
+                        <!-- End Single features -->
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <!-- Start Single features -->
+                        <div class="single-features">
+                            <div class="signle-icon">
+                                <i class="icofont-settings-alt"></i>
+                            </div>
+                            <h3>Wait for MedAI to process the data</h3>
+                        </div>
+                        <!-- End Single features -->
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <!-- Start Single features -->
+                        <div class="single-features last">
+                            <div class="signle-icon">
+                                <i class="icofont icofont-stethoscope"></i>
+                            </div>
+                            <h3>Receive the diagnosis</h3>
+                        </div>
+                        <!-- End Single features -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Feautes -->
+        
+        <!-- Start Fun-facts -->
+        <div id="fun-facts" class="fun-facts section overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <!-- Start Single Fun -->
+                        <div class="single-fun text-center">
+                            <i class="icofont icofont-patient-bed"></i>
+                            <div class="content">
+                                <span class="counter">20000</span>
+                                <p>patients consulted</p>
+                            </div>
+                        </div>
+                        <!-- End Single Fun -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <!-- Start Single Fun -->
+                        <div class="single-fun text-center">
+                            <i class="icofont-capsule"></i>
+                            <div class="content">
+                                <span class="counter">5000</span>
+                                <p>cases diagnosed</p>
+                            </div>
+                        </div>
+                        <!-- End Single Fun -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <!-- Start Single Fun -->
+                        <div class="single-fun text-center">
+                            <i class="icofont icofont-doctor"></i>
+                            <div class="content">
+                                <span class="counter">300</span>
+                                <p>collaborating doctors</p>
+                            </div>
+                        </div>
+                        <!-- End Single Fun -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <!-- Start Single Fun -->
+                        <div class="single-fun text-center">
+                            <i class="icofont icofont-prescription"></i>
+                            <div class="content">
+                                <span class="counter">10000</span>
+                                <p>online consultations</p>
+                            </div>
+                        </div>
+                        <!-- End Single Fun -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Fun-facts -->
+
+
+        <!-- Start Why choose -->
+        <section class="why-choose section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>We Offer Different Services to Improve Your Health</h2>
+                            <img src="{% static 'website/img/section-img.png' %}" alt="#">
+                            <p>Complete our online questionnaire to receive a preliminary assessment of your health condition.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <!-- Start Choose Left -->
+                        <div class="choose-left">
+                            <h3>Who It's For</h3>
+                            <p>The questionnaire is intended for any individual experiencing mental or physical disorders and wants to receive a preliminary online diagnosis before contacting a doctor.</p>
+                            <p>Attention! If you feel unwell, please contact a doctor or call 112! The diagnosis is not made by a doctor but by a robot that can make mistakes!</p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <ul class="list">
+                                        <li><i class="fa fa-caret-right"></i>Quick and convenient assessment.</li>
+                                        <li><i class="fa fa-caret-right"></i>Data privacy and security.</li>
+                                        <li><i class="fa fa-caret-right"></i>Personalized recommendations.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul class="list">
+                                        <li><i class="fa fa-caret-right"></i>24/7 accessibility.</li>
+                                        <li><i class="fa fa-caret-right"></i>Initial free consultation.</li>
+                                        <li><i class="fa fa-caret-right"></i>Easy to use.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Choose Left -->
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <!-- Start Choose Right -->
+                        <div class="choose-right">
+                            <div class="image-container">
+                            </div>
+                        </div>
+                        <!-- End Choose Right -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Why choose -->
+        
+
+        <!-- Start Call -->
+        <section class="call-action overlay" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="content">
+                            <h2>For emergencies call 112</h2>
+                            <p>If you need urgent medical assistance, do not hesitate to call 112. For consultations and preliminary diagnoses, complete our online questionnaire.</p>
+                            <div class="button">
+                                <a href="{% url 'diagnose' %}" class="btn">Start the Questionnaire</a>
+                                <a href="{% url 'heart' %}" class="btn second">Check blood pressure<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Call -->
+
+
+        
+        <!-- Start service -->
+        <section class="services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>We Offer Diagnosis to Improve Your Health</h2>
+                            <img src="{% static 'website/img/section-img.png' %}" alt="#">
+                            <p>By completing our online questionnaire, we provide preliminary diagnosis for various medical specialties.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-heart-alt"></i>
+							<h4>Cardiology</h4>
+							<p>We provide preliminary diagnosis for heart conditions by evaluating symptoms and medical history.</p>    
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-herbal"></i>
+							<h4>Gastroenterology</h4>
+							<p>We evaluate digestive symptoms to offer a preliminary diagnosis and treatment recommendations.</p>    
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-brain"></i>
+							<h4>Neurology</h4>
+							<p>We analyze neurological symptoms to identify possible central and peripheral nervous system conditions.</p>    
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-lungs"></i>
+							<h4>Pneumology</h4>
+							<p>We provide preliminary diagnosis for lung conditions by evaluating respiratory symptoms.</p>    
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-autism"></i>
+							<h4>Psychiatry</h4>
+							<p>We evaluate mental and emotional health to offer a preliminary diagnosis and treatment recommendations.</p>    
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-blood-test"></i>
+							<h4>Hematology</h4>
+							<p>We provide preliminary diagnosis for blood and hematologic system conditions.</p>    
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+				
+            </div>
+        </section>
+        <!--/ End service -->
+        
+        
+        
+        <!-- Footer Area -->
+        <footer id="footer" class="footer ">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer">
+                                <h2>About Us</h2>
+                                <p>We are a company dedicated to providing the best services to our clients, with a strong commitment to excellence and innovation.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer f-link">
+                                <h2>Quick Links</h2>
+                                <ul>
+                                    <li><a href="{% url 'home' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                                    <li><a href="{% url 'about' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                    <li><a href="{% url 'contact' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer">
+                                <h2>Operating Hours</h2>
+                                <p>We are open online 24/7!</p>
+                                <p>For more information, you can contact us during the following hours:</p>
+                                <ul class="time-sidual">
+                                    <li class="day">Monday - Friday <span>8.00-17.00</span></li>
+                                    <li class="day">Saturday <span>9.00-15.00</span></li>
+                                    <li class="day">Sunday <span>9.00-15.00</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer">
+                                <h2>Contact Information</h2>
+                                <p>For any questions or additional information, please do not hesitate to contact us.</p>
+                                <ul>
+                                    <li><i class="icofont icofont-phone"></i> +40 123 456 789</li>
+                                    <li><i class="icofont icofont-envelope"></i> medAI@mail.com</li>
+                                    <li><i class="icofont icofont-location-pin"></i> Strada Principală, Cluj-Napoca</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+                </div>
+            </div>
+            <!--/ End Footer Top -->
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <div class="copyright-content">
+                                <p>© Copyright 2024 | All rights reserved by MedAI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Copyright -->
+        </footer>
+        <!--/ End Footer Area -->
+        
+        <!-- jquery Min JS -->
+        <script src="{% static 'website/js/jquery.min.js' %}"></script>
+        <!-- jquery Migrate JS -->
+        <script src="{% static 'website/js/jquery-migrate-3.0.0.js' %}"></script>
+        <!-- jquery Ui JS -->
+        <script src="{% static 'website/js/jquery-ui.min.js' %}"></script>
+        <!-- Easing JS -->
+        <script src="{% static 'website/js/easing.js' %}"></script>
+        <!-- Color JS -->
+        <script src="{% static 'website/js/colors.js' %}"></script>
+        <!-- Popper JS -->
+        <script src="{% static 'website/js/popper.min.js' %}"></script>
+        <!-- Bootstrap Datepicker JS -->
+        <script src="{% static 'website/js/bootstrap-datepicker.js' %}"></script>
+        <!-- Jquery Nav JS -->
+        <script src="{% static 'website/js/jquery.nav.js' %}"></script>
+        <!-- Slicknav JS -->
+        <script src="{% static 'website/js/slicknav.min.js' %}"></script>
+        <!-- ScrollUp JS -->
+        <script src="{% static 'website/js/jquery.scrollUp.min.js' %}"></script>
+        <!-- Niceselect JS -->
+        <script src="{% static 'website/js/niceselect.js' %}"></script>
+        <!-- Tilt Jquery JS -->
+        <script src="{% static 'website/js/tilt.jquery.min.js' %}"></script>
+        <!-- Owl Carousel JS -->
+        <script src="{% static 'website/js/owl-carousel.js' %}"></script>
+        <!-- counterup JS -->
+        <script src="{% static 'website/js/jquery.counterup.min.js' %}"></script>
+        <!-- Steller JS -->
+        <script src="{% static 'website/js/steller.js' %}"></script>
+        <!-- Wow JS -->
+        <script src="{% static 'website/js/wow.min.js' %}"></script>
+        <!-- Magnific Popup JS -->
+        <script src="{% static 'website/js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Counter Up CDN JS -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+        <!-- Main JS -->
+        <script src="{% static 'website/js/main.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,305 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="MedAI, medical AI, AI diagnostics, symptom checker, health diagnostics, medical technology, healthcare AI, disease diagnosis, health assessment, medical services, AI healthcare solutions">
+        <meta name="description" content="">
+        <meta name='copyright' content=''>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Title -->
+        <title>MedAI</title>
+        
+        <!-- Favicon -->
+        <link rel="icon" href="{% static 'website/img/favicon.png' %}">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/nice-select.css' %}">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/font-awesome.min.css' %}">
+        <!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/icofont.css' %}">
+        <!-- Slicknav -->
+        <link rel="stylesheet" href="{% static 'website/css/slicknav.min.css' %}">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/owl-carousel.css' %}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/animate.min.css' %}">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/magnific-popup.css' %}">
+        
+        <!-- MedAI CSS -->
+        <link rel="stylesheet" href="{% static 'website/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'website/css/responsive.css' %}">
+        
+    </head>
+    <body>
+    
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+        
+        <!-- Header Area -->
+        <header class="header" >
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-5 col-12">
+                            <!-- Contact -->
+                            <ul class="top-link">
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                            <!-- End Contact -->
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-12">
+                            <!-- Top Contact -->
+                            <ul class="top-contact">
+                                <li><i class="fa fa-phone"></i>+40 1234 56789</li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:medAI@mail.com">medAI@mail.com</a></li>
+                            </ul>
+                            <!-- End Top Contact -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Topbar -->
+            <!-- Header Inner -->
+            <div class="header-inner">
+                <div class="container">
+                    <div class="inner">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <!-- Start Logo -->
+                                <div class="logo">
+                                    <a href="{% url 'home' %}"><img src="{% static 'website/img/logo.png' %}" alt="#"></a>
+                                </div>
+                                <!-- End Logo -->
+                                <!-- Mobile Nav -->
+                                <div class="mobile-nav"></div>
+                                <!-- End Mobile Nav -->
+                            </div>
+                            <div class="col-lg-7 col-md-9 col-12">
+                                <!-- Main Menu -->
+                                <div class="main-menu">
+                                    <nav class="navigation">
+                                        <ul class="nav menu">
+                                            <li><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href="#">Services<i class="icofont-rounded-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="{% url 'diagnose' %}">Symptom Interpretation</a></li>
+                                                    <li><a href="{% url 'heart' %}">Blood Pressure Check</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!--/ End Main Menu -->
+                            </div>
+                            <div class="col-lg-2 col-12">
+                                <div class="get-quote">
+                                    <a href="{% url 'diagnose' %}" class="btn">Start the Questionnaire</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Header Inner -->
+        </header>
+        <!-- End Header Area -->
+    
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs overlay">
+            <div class="container">
+                <div class="bread-inner">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Contact Us</h2>
+                            <ul class="bread-list">
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><i class="icofont-simple-right"></i></li>
+                                <li class="active">Contact Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Breadcrumbs -->
+                
+        <!-- Start Contact Us -->
+        <section class="contact-us section">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="row">
+                        <!-- single-info -->
+                        <div class="col-lg-4 col-12 ">
+                            <div class="single-info">
+                                <i class="icofont icofont-ui-call"></i>
+                                <div class="content">
+                                    <h3>+(40) 1234 56789</h3>
+                                    <p>medAI@mail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/End single-info -->
+                        <!-- single-info -->
+                        <div class="col-lg-4 col-12 ">
+                            <div class="single-info">
+                                <i class="icofont-google-map"></i>
+                                <div class="content">
+                                    <h3>Main Street</h3>
+                                    <p>Cluj-Napoca, Cluj</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/End single-info -->
+                        <!-- single-info -->
+                        <div class="col-lg-4 col-12 ">
+                            <div class="single-info">
+                                <i class="icofont icofont-wall-clock"></i>
+                                <div class="content">
+                                    <h3>Monday - Friday </h3>
+                                    <p>8.00 - 17.00 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/End single-info -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Contact Us -->
+        
+        <!-- Footer Area -->
+        <footer id="footer" class="footer ">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer">
+                                <h2>About Us</h2>
+                                <p>We are a company dedicated to providing the best services to our clients, with a strong commitment to excellence and innovation.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer f-link">
+                                <h2>Quick Links</h2>
+                                <ul>
+                                    <li><a href="{% url 'home' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                                    <li><a href="{% url 'about' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                    <li><a href="{% url 'contact' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer">
+                                <h2>Operating Hours</h2>
+                                <p>We are open online 24/7!</p>
+                                <p>For more information, you can contact us during the following hours:</p>
+                                <ul class="time-sidual">
+                                    <li class="day">Monday - Friday <span>8.00-17.00</span></li>
+                                    <li class="day">Saturday <span>9.00-15.00</span></li>
+                                    <li class="day">Sunday <span>9.00-15.00</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer">
+                                <h2>Contact Information</h2>
+                                <p>For any questions or additional information, do not hesitate to contact us.</p>
+                                <ul>
+                                    <li><i class="icofont icofont-phone"></i> +40 123 456 789</li>
+                                    <li><i class="icofont icofont-envelope"></i> medAI@mail.com</li>
+                                    <li><i class="icofont icofont-location-pin"></i> Main Street, Cluj-Napoca</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+                </div>
+            </div>
+            <!--/ End Footer Top -->
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <div class="copyright-content">
+                                <p>© Copyright 2024 | All rights reserved by MedAI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Copyright -->
+        </footer>
+        <!--/ End Footer Area -->
+        
+        <!-- jquery Min JS -->
+        <script src="{% static 'website/js/jquery.min.js' %}"></script>
+        <!-- jquery Migrate JS -->
+        <script src="{% static 'website/js/jquery-migrate-3.0.0.js' %}"></script>
+        <!-- jquery Ui JS -->
+        <script src="{% static 'website/js/jquery-ui.min.js' %}"></script>
+        <!-- Easing JS -->
+        <script src="{% static 'website/js/easing.js' %}"></script>
+        <!-- Color JS -->
+        <script src="{% static 'website/js/colors.js' %}"></script>
+        <!-- Popper JS -->
+        <script src="{% static 'website/js/popper.min.js' %}"></script>
+        <!-- Jquery Nav JS -->
+        <script src="{% static 'website/js/jquery.nav.js' %}"></script>
+        <!-- Slicknav JS -->
+        <script src="{% static 'website/js/slicknav.min.js' %}"></script>
+        <!-- ScrollUp JS -->
+        <script src="{% static 'website/js/jquery.scrollUp.min.js' %}"></script>
+        <!-- Niceselect JS -->
+        <script src="{% static 'website/js/niceselect.js' %}"></script>
+        <!-- Tilt Jquery JS -->
+        <script src="{% static 'website/js/tilt.jquery.min.js' %}"></script>
+        <!-- Owl Carousel JS -->
+        <script src="{% static 'website/js/owl-carousel.js' %}"></script>
+        <!-- counterup JS -->
+        <script src="{% static 'website/js/jquery.counterup.min.js' %}"></script>
+        <!-- Steller JS -->
+        <script src="{% static 'website/js/steller.js' %}"></script>
+        <!-- Wow JS -->
+        <script src="{% static 'website/js/wow.min.js' %}"></script>
+        <!-- Magnific Popup JS -->
+        <script src="{% static 'website/js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Bootstrap JS -->
+        <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+        <!-- Main JS -->
+        <script src="{% static 'website/js/main.js' %}"></script>
+    </body>
+</html>
